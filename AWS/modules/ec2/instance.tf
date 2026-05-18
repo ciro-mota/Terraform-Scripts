@@ -17,6 +17,11 @@ resource "aws_instance" "ec2_instance" {
     encrypted             = true
   }
 
+  metadata_options {
+    http_endpoint = "enabled"
+    http_tokens   = "required"
+  }
+
   # user_data_base64 = filebase64("${path.root}/scripts/nginx.sh")
 
   tags = merge(
