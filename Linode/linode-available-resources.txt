@@ -1,0 +1,26 @@
+# Available regions:
+us-central // us-east // us-iad // us-lax // us-mia // us-ord // us-sea
+us-southeast // us-west // ap-south // ap-southeast // ap-west // br-gru
+ca-central // eu-central // eu-west // fr-par // id-cgk // in-maa // it-mil
+jp-osa // nl-ams // se-sto
+
+# Available images:
+linode/almalinux8 // linode/almalinux9 // linode/alpine3.14 // linode/alpine3.15
+linode/alpine3.16 // linode/alpine3.17 // linode/alpine3.18 // linode/arch
+linode/centos7 // linode/centos-stream8 // linode/centos-stream9 // linode/debian10
+linode/debian11 // linode/fedora36 // linode/fedora37 // linode/fedora38 // linode/gentoo
+linode/kali // linode/debian11-kube-v1.25.4 // linode/debian11-kube-v1.26.1
+linode/debian11-kube-v1.26.3 // linode/debian11-kube-v1.27.5 // linode/opensuse15.4
+linode/opensuse15.5 // linode/rocky8 // linode/rocky9 // linode/slackware14.2
+linode/slackware15.0 // linode/ubuntu16.04lts // linode/ubuntu18.04 // linode/ubuntu20.04
+linode/ubuntu22.04 // linode/ubuntu22.10 // linode/ubuntu23.04 // linode/ubuntu23.10
+linode/debian9 // linode/slackware14.1
+
+# Available types:
+g6-nanode-1 // g6-standard-1 // g6-standard-2 // g6-standard-4 // g6-standard-6
+g6-standard-8 // g6-standard-16 // g6-standard-20 // g6-standard-24 // g6-standard-32
+g7-highmem-1 // g7-highmem-2 // g7-highmem-4 // g7-highmem-8 // g7-highmem-16 // g6-dedicated-2
+g6-dedicated-4 // g6-dedicated-8 // g6-dedicated-16 // g6-dedicated-32 // g6-dedicated-48
+g6-dedicated-50 // g6-dedicated-56 // g6-dedicated-64 // g1-gpu-rtx6000-1 // g1-gpu-rtx6000-2
+g1-gpu-rtx6000-3 // g1-gpu-rtx6000-4 // g7-premium-2 // g7-premium-4 // g7-premium-8
+g7-premium-16 // g7-premium-32 // g7-premium-48 // g7-premium-50 // g7-premium-56 // g7-premium-64
