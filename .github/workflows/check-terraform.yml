@@ -45,4 +45,3 @@ jobs:
           exit-code: 1
           severity: HIGH,CRITICAL
           limit-severities-for-sarif: true
-          trivyignores: .trivyignore
