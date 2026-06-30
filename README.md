@@ -12,10 +12,11 @@ O objetivo aqui é centralizar (em um só lugar) configurações reutilizáveis,
 
 ## Estrutura
 
-- `AWS/`: exemplos e módulos para AWS (ex.: EC2) e scripts auxiliares.
-- `DO/`: exemplos e módulos para DigitalOcean (droplets) e cloud-init.
-- `Linode/`: exemplos e módulos para Linode e scripts auxiliares.
-- `OCI/`: exemplos e módulos para Oracle Cloud Infrastructure (OCI).
+- [`AWS/`](AWS/README.md): exemplos e módulos para AWS (ex.: EC2) e scripts auxiliares.
+- [`DO/`](DO/README.md): exemplos e módulos para DigitalOcean (droplets) e cloud-init.
+- [`GCP`](GCP/README.md): exemplos e módulos para Google Cloud.
+- [`Linode/`](Linode/README.md): exemplos e módulos para Linode e scripts auxiliares.
+- [`OCI/`](OCI/README.md): exemplos e módulos para Oracle Cloud Infrastructure (OCI).
 
 Cada provider costuma seguir o mesmo padrão:
 
