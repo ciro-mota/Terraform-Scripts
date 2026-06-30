@@ -37,7 +37,19 @@
 /DO/*.tfplan
 /DO/*.plan
 
+/GCP/**/.terraform/
+/GCP/.terraform.tfstate.lock.hcl
+/GCP/.terraform.tfstate.lock.info
+/GCP/terraform.tfstate
+/GCP/terraform.tfstate.*
+/GCP/terraform.tfvars
+/GCP/crash.log
+/GCP/crash.*.log
+/GCP/*.tfplan
+/GCP/*.plan
+
 /Linode/**/.terraform/
+/Linode/.terraform.tfstate.lock.hcl
 /Linode/.terraform.tfstate.lock.info
 /Linode/terraform.tfstate
 /Linode/terraform.tfstate.*
