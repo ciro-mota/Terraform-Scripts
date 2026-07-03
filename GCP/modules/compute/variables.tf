@@ -57,3 +57,15 @@ variable "gcp_ssh_public_key" {
     error_message = "Informe uma chave pública SSH válida."
   }
 }
+
+variable "nginx_network_tag" {
+  type        = string
+  default     = "nginx"
+  description = "Tag de rede usada para aplicar a regra de firewall do nginx"
+}
+
+variable "nginx_allowed_source_ranges" {
+  type        = list(string)
+  default     = ["0.0.0.0/0"]
+  description = "Faixas de IP autorizadas a acessar as portas 80 e 443"
+}
