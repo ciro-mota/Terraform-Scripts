@@ -8,7 +8,7 @@ resource "google_compute_instance" "compute_instance" {
     initialize_params {
       image = data.google_compute_image.debian.self_link
       type  = "pd-standard"
-      size  = 10
+      size  = 20
     }
   }
 
@@ -18,9 +18,12 @@ resource "google_compute_instance" "compute_instance" {
     access_config {}
   }
 
+  tags = [var.nginx_network_tag]
+
   metadata = {
     "enable-oslogin" = "FALSE"
     "ssh-keys"       = "${var.gcp_ssh_user}:${var.gcp_ssh_public_key}"
+    # startup-script   = file("${path.root}/scripts/nginx.sh")
   }
 
   depends_on = []
