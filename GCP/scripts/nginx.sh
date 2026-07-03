@@ -28,20 +28,7 @@ Commercial support is available at
 </html>
 EOF
 
-if [ -f /etc/debian_version ]; then
-  export DEBIAN_FRONTEND=noninteractive
-  apt-get -q update && apt-get -qy install ansible
-elif [ -f /etc/amazon-linux-release ]; then
-  dnf check-update > /dev/null || true
-  dnf install -y ansible-core
-elif [ -f /etc/redhat-release ]; then
-  sudo dnf check-update > /dev/null || true
-  sudo dnf install -y ansible-core
-else
-  echo "Unsuported Distro."
-fi
-
-sudo tee requirements.yml <<'EOF'
+tee /tmp/requirements.yml <<'EOF'
 ---
 roles:
   - name: geerlingguy.nginx
@@ -55,7 +42,7 @@ collections:
     version: ">=10.5.2"
 EOF
 
-sudo tee playbook.yml <<'EOF'
+tee /tmp/playbook.yml <<'EOF'
 ---
 - hosts: localhost
   become: true
@@ -166,5 +153,15 @@ sudo tee playbook.yml <<'EOF'
         state: reloaded
 EOF
 
-sudo ansible-galaxy install -r requirements.yml
-sudo ansible-playbook playbook.yml
+if [ -f /etc/debian_version ]; then
+  export DEBIAN_FRONTEND=noninteractive
+  apt-get -q update && apt-get -qy install ansible
+elif [ -f /etc/redhat-release ]; then
+  dnf check-update > /dev/null || true
+  dnf install -y ansible-core
+else
+  echo "Unsuported Distro."
+fi
+
+ansible-galaxy install -r /tmp/requirements.yml
+ansible-playbook /tmp/playbook.yml
