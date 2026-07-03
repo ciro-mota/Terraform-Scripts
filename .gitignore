@@ -38,6 +38,7 @@
 /DO/*.plan
 
 /GCP/**/.terraform/
+/GCP/.terraform.lock
 /GCP/.terraform.tfstate.lock.hcl
 /GCP/.terraform.tfstate.lock.info
 /GCP/terraform.tfstate
